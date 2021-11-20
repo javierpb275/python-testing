@@ -1,3 +1,6 @@
+def do_stuff(num):
+    return num+5
+
 if __name__ == '__main__':
-    pass
+    do_stuff(10)
 
