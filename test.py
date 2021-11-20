@@ -7,27 +7,10 @@ class TestMain(unittest.TestCase):
         result = main.do_stuff(test_param)
         self.assertEqual(result, 15)
 
+    def test_do_stuff2(self):
+        test_param = 'safasf'
+        result = main.do_stuff(test_param)
+        self.assertTrue(isinstance(result, ValueError))
 
-unittest.main()#This runs the entire test file
 
-'''
-Ran 1 test in 0.000s
-
-OK
-'''
-
-'''
-F
-======================================================================
-FAIL: test_do_stuff (__main__.TestMain)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File  "\python-testing\test.py", line 8, in test_do_stuff
-    self.assertEqual(result, 10)
-AssertionError: 15 != 10
-
-----------------------------------------------------------------------
-Ran 1 test in 0.000s
-
-FAILED (failures=1)
-'''
+unittest.main()
